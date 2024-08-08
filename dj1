@@ -1,0 +1,7 @@
+from yourapp.models import Question, Choice
+import datetime
+
+q = Question.objects.create(question_text="Answer to the Ultimate Question", pub_date=datetime.datetime.now())
+q.choice_set.create(choice_text="42", votes=0)
+q.choice_set.create(choice_text="Not 42", votes=0)
+q.choice_set.create(choice_text="Maybe 42", votes=0)
